@@ -89,7 +89,7 @@ public class SelectRouteActivity extends AppCompatActivity {
                 // double gasType, double distanceTravelledCity, double distanceTravelledHighway, int milesPerGallonCity, int milesPerGallonHighway
                 double CO2Emissions = CarbonCalculator.calculate(gasType, distanceTravelledCity, distanceTravelledHighway, milesPerGallonCity, milesPerGallonHighway);
 
-                Journey journey = new Journey(userCurrentVehicle, userCurrentRoute, CO2Emissions);
+                Journey journey = new Journey(userCurrentVehicle, userCurrentRoute, CO2Emissions, journeyManager.getCurrentDate());
                 journeyManager.add(journey);
                 finish();
             }
